@@ -10,8 +10,8 @@ import Header from "../components/Header.astro";
 		<meta name="generator" content={Astro.generator} />
 		<title>Astro</title>
 	</head>
-	<body>
-		<Header/>
+	<body class="bg-gray-900">
+		<Header />
         <slot/>
 	</body>
 </html>
@@ -28,6 +28,7 @@ import Header from "../components/Header.astro";
     body {
         display: flex;
         justify-content: center;
+        border-color: tomato;
     }
 
 </style>
