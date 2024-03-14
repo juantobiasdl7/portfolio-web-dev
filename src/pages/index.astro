@@ -1,9 +1,25 @@
 ---
 import Layout from "../layouts/Layout.astro"
+
+/*
+
+*/
 ---
 
 <Layout>
-	<main>
-		
+	<main class="flex flex-col w-full items-center">
+		<section class=" w-10/12 md:w-8/12 py-14 text-white">
+			<img class=" h-[80px] w-[80px] rounded-md " src="../../public/phototwo.jpeg" alt="">
+			<h1 class="text-5xl font-bold flex flex-row gap-x-4 pt-10">Hello, I'm Tobías
+				<div class="flex items-start">
+					<span class="inline-flex items-center gap-x-1.5 rounded-md bg-green-100 px-1.5 pb-0.5 text-sm font-medium text-green-700">
+						Open to work
+					</span>
+				</div>
+			</h1>
+			<h2 class="text-xl py-8">+4 years of experience. Software Developer from Mexico. Specialized in crafting unique web applications.</h2>
+			<a href="https://www.linkedin.com/in/tob%C3%ADas/" target="_blank" class="text-4xl mr-8"><i class="fa fa-linkedin-square"></i></a>
+			<a href="https://github.com/juantobiasdl7" target="_blank" class="text-4xl"><i class="fa fa-github"></i></a>
+		</section>
 	</main>
 </Layout>

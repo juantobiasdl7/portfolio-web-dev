@@ -6,11 +6,13 @@ import Header from "../components/Header.astro";
     <head>
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>Astro</title>
 	</head>
-	<body class="bg-gray-900">
+	<body>
+        <div class="absolute top-0 z-[-2] h-screen w-screen bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"></div>
 		<Header />
         <slot/>
 	</body>
@@ -28,7 +30,7 @@ import Header from "../components/Header.astro";
     body {
         display: flex;
         justify-content: center;
-        border-color: tomato;
+        flex-direction: column;
     }
 
 </style>
