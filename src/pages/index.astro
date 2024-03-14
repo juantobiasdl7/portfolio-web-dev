@@ -1,6 +1,8 @@
 ---
 import Layout from "../layouts/Layout.astro"
-
+import LinkedInIcon from "../components/icons/Linkedin.astro"
+import GithubIcon from "../components/icons/Github.astro"
+import SocialPill from "../components/SocialPill.astro"
 /*
 
 */
@@ -18,8 +20,16 @@ import Layout from "../layouts/Layout.astro"
 				</div>
 			</h1>
 			<h2 class="text-xl py-8">+4 years of experience. Software Developer from Mexico. Specialized in crafting unique web applications.</h2>
-			<a href="https://www.linkedin.com/in/tob%C3%ADas/" target="_blank" class="text-4xl mr-8"><i class="fa fa-linkedin-square"></i></a>
-			<a href="https://github.com/juantobiasdl7" target="_blank" class="text-4xl"><i class="fa fa-github"></i></a>
+			<nav class="flex gap-x-2">
+				<SocialPill href="https://www.linkedin.com/in/tob%C3%ADas/">
+					<LinkedInIcon class="w-5 h-5" />
+						LinkedIn
+				</SocialPill>
+				<SocialPill href="https://github.com/juantobiasdl7">
+					<GithubIcon class="w-6 h-6" />
+						Github
+				</SocialPill>
+			</nav>
 		</section>
 	</main>
 </Layout>
