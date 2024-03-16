@@ -3,24 +3,31 @@ import Layout from "../layouts/Layout.astro"
 import LinkedInIcon from "../components/icons/Linkedin.astro"
 import GithubIcon from "../components/icons/Github.astro"
 import SocialPill from "../components/SocialPill.astro"
+import Mail from "../components/icons/Mail.astro"
+import Experience from "../components/Experience.astro"
+import SectionContainer from "../components/SectionContainer.astro"
+import Briefcase from "../components/icons/Briefcase.astro"
 /*
 
 */
 ---
 
-<Layout>
+<Layout 
+	title="Tobías Portfolio - Software Developer with over +3 years of experience."
+	description="Hire Tobías to create your web application. Specialized in crafting unique web applications."
+>
 	<main class="flex flex-col w-full items-center">
-		<section class=" w-10/12 md:w-8/12 py-14 text-white">
+		<SectionContainer>
 			<img class=" h-[80px] w-[80px] rounded-md " src="../../public/phototwo.jpeg" alt="">
-			<h1 class="text-5xl font-bold flex flex-row gap-x-4 pt-10">Hello, I'm Tobías
+			<h1 class="text-5xl font-bold flex flex-row md:gap-x-4 pt-10">Hello, I'm Tobías
 				<div class="flex items-start">
-					<span class="inline-flex items-center gap-x-1.5 rounded-md bg-green-100 px-1.5 pb-0.5 text-sm font-medium text-green-700">
+					<span class="inline-flex items-center rounded-md bg-green-100 px-1.5 pb-0.5 text-sm font-medium text-green-700">
 						Open to work
 					</span>
 				</div>
 			</h1>
 			<h2 class="text-xl py-8">+4 years of experience. Software Developer from Mexico. Specialized in crafting unique web applications.</h2>
-			<nav class="flex gap-x-2">
+			<nav class="flex flex-wrap gap-x-2 gap-y-4">
 				<SocialPill href="https://www.linkedin.com/in/tob%C3%ADas/">
 					<LinkedInIcon class="w-5 h-5" />
 						LinkedIn
@@ -29,7 +36,16 @@ import SocialPill from "../components/SocialPill.astro"
 					<GithubIcon class="w-6 h-6" />
 						Github
 				</SocialPill>
+				<SocialPill href="mailto: juantobiasdl7@gmail.com">
+					<Mail class="w-6 h-6" />
+						juantobiasdl7@gmail.com
+				</SocialPill>
 			</nav>
-		</section>
+		</SectionContainer>
+
+		<SectionContainer id="experience">
+			<h2 class="text-3xl font-semibold mb-8 flex gap-x-2 items-center"><Briefcase class="size-6"/> Work Experience</h2>
+			<Experience/>
+		</SectionContainer>
 	</main>
 </Layout>

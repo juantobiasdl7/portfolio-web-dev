@@ -1,19 +1,27 @@
 ---
 import Header from "../components/Header.astro";
+
+interface Props {
+    title: string,
+    description: string,
+}
+
+const { description, title} = Astro.props;
+
 ---
 
 <html lang="en">
     <head>
 		<meta charset="utf-8" />
+        <meta name="description" content={description}/>
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<title>{title}</title>
 	</head>
 	<body>
-        <div class="absolute top-0 z-[-2] h-screen w-screen bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"></div>
-		<Header />
+        <Header />
         <slot/>
 	</body>
 </html>
@@ -25,12 +33,26 @@ import Header from "../components/Header.astro";
 
     html {
         font-family: system-ui, sans-serif;
+        scroll-behavior: smooth;
     }
 
     body {
         display: flex;
         justify-content: center;
         flex-direction: column;
+        min-height: 100vh;
+        background-color: #0f131a; 
+        background-image: radial-gradient(
+        ellipse 80% 80% at 50% -20%,
+        rgba(120, 119, 198, 0.3),
+        rgba(255, 255, 255, 0)
+        );
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        html {
+            scroll-behavior: auto;
+        }
     }
 
 </style>

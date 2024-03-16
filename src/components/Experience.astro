@@ -1,0 +1,58 @@
+---
+// Removed the import statement for ExperienceItem since it is not being used.
+import ExperienceItem from './ExperienceItem.astro';
+
+const EXPERIENCE = [
+    {
+        title: 'Senior Digital Project Manager, Business Analyst',
+        company: 'NTT Data',
+        location: 'Remote',
+        date: 'Jun 2022 - Mar 2024',
+        description1: `• 77.78% reduction in the release cycle time for launching new versions into production, streamlining the process from every 90 days to just 20 days.`,
+        description2:`• 90% Imporvement in Defect Rate / Defect Density metric, reducing the number of defects from ~50 to only ~5 per version 
+released into production.`,
+        description3: `• 99.83% fault-free session rate in production for Android & iOS users.`,
+        description4: `• iOS & Android mobile applications rated 4.8 out of 5 in both App Store and Play Store.`,
+    },
+    {
+        title: 'Digital Project Manager',
+        company: 'Optimen',
+        location: 'Remote',
+        date: 'Oct 2020 - Jun 2022',
+        description1: `• Launched Operations Resources & KPI & Analytics software product, a web application that centralized airline information for improved performance monitoring and decision-making.`,
+        description2: `• Managed the implementation of Turnaround Manager Application, a robust real-time solution to improve efficiency in airline turnaround operations. Working with remote teams across Poland and Seattle. Primary language of 
+communication was English.`,
+        description3: `•  Leveraged my written and verbal communication skills for articulating customer challenges to turn incomplete, conflicting, or ambiguous inputs into solid action plans & write technical documentation.`,
+    },
+    {
+        title: 'Digital Project Manager',
+        company: 'Global Hitss',
+        location: 'Monterrey, Mexico',
+        date: 'May 2020 - Oct 2020',
+        description1: `• Coordinated the implemetation of ELINA project, a software product designed to facilitate the operations of sales executives at Grupo Financiero Banorte.`,
+        description2: `• Led the role of Scrum Master for a team of 12 software engineers.`,
+        description3: `• Helped Banorte executives to understand their needs and then translate them into technical terms for the members of the development team, creating a clear step-by-step plan to deliver exactly what the client expects.`,
+    },
+    {
+        title: 'Maintenance Engineer Trainer',
+        company: 'Aeromexico',
+        location: 'Ciudad de México',
+        date: 'Nov 2019 - Abr 2020',
+        description1: `• Imparted courses for engineers and technicians on the use of AMOS (Aircraft Maintenance and Operating System) which is a software used to manage aircraft maintenance, finance, and supply chain operations.`,
+        description2: `• Worked for third party clients such as Delta giving courses in English for Japanese engineers and technicians.`,
+        description3: `• Responsible for creating, improving, and developing courses for the maintenance, engineering and the supply chain staff processes and operations.`,
+    },
+]
+---
+
+
+<ol class="relative border-s border-gray-200 ml-3">      
+    {
+        EXPERIENCE.map((experience) => (
+            <li class="mb-10 ms-6">
+                <ExperienceItem {...experience} />
+            </li>
+        ))
+    }
+</ol>
+
